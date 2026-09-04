@@ -854,20 +854,20 @@
 
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <h4>Humidité du Sol</h4>
-                        <div class="value" id="val-humidity">65 %</div>
+                        <h4>Humidité de l'air</h4>
+                        <div class="value" id="val-humidity">0 %</div>
                     </div>
                     <div class="metric-card">
                         <h4>Température Air</h4>
-                        <div class="value" id="val-temp">28 °C</div>
+                        <div class="value" id="val-temp">0°C</div>
                     </div>
                     <div class="metric-card">
                         <h4>Niveau d'Eau</h4>
-                        <div class="value" id="val-water">Élevé</div>
+                        <div class="value" id="val-water">0</div>
                     </div>
                     <div class="metric-card">
-                        <h4>Recommandation</h4>
-                        <div class="value" id="val-recom" style="font-size: 0.9rem; color: var(--primary-green); font-weight: 600;">Irrigation Optimale</div>
+                        <h4>humidité du sol</h4>
+                        <div class="value" id="val-recom" style="font-size: 0.9rem; color: var(--primary-green); font-weight: 600;">0</div>
                     </div>
                 </div>
             </div>
@@ -1179,5 +1179,6 @@
         syncParcels();
         setInterval(() => { if (!API_BASE) { parcels = parcels.map(parcel => ({ ...parcel, humidity: Math.max(25, Math.min(80, parcel.humidity + Math.round((Math.random() - 0.5) * 4))) })); write('agrisoOnParcels', parcels); renderPlatform(); } }, 8000);
     </script>
+    <script src="./js/client.js"></script>
 </body>
 </html>
